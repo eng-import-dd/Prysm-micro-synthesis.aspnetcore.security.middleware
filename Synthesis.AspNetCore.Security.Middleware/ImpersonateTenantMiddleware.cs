@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
+using Synthesis.Configuration;
 using Synthesis.Http;
 using Synthesis.Http.Extensions;
 using Synthesis.Http.Microservice.Constants;
@@ -25,11 +26,11 @@ namespace Synthesis.AspNetCore.Security.Middleware
         private readonly string _tenantUrl;
         private readonly RequestDelegate _next;
         
-        public ImpersonateTenantMiddleware(RequestDelegate next, IPolicyEvaluator policyEvaluator, IHttpClient httpClient, string tenantUrl)
+        public ImpersonateTenantMiddleware(RequestDelegate next, IPolicyEvaluator policyEvaluator, IHttpClient httpClient, IAppSettingsReader appSettingsReader)
         {
             _policyEvaluator = policyEvaluator;
             _httpClient = httpClient;
-            _tenantUrl = tenantUrl.TrimEnd('/');
+            _tenantUrl = appSettingsReader.GetValue<string>("Tenant.Url").TrimEnd('/');
             _next = next;
         }
 
