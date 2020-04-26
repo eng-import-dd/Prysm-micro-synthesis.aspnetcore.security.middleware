@@ -12,11 +12,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="3.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
-    <PackageReference Include="Synthesis.Authentication.Jwt" Version="1.0.2" />
-    <PackageReference Include="Synthesis.Guest.ProjectContext" Version="1.0.3" />
-    <PackageReference Include="Synthesis.Logging" Version="2.0.6" />
-    <PackageReference Include="Synthesis.PolicyEvaluator" Version="1.0.2" />
-    <PackageReference Include="Synthesis.TenantService.InternalApi" Version="1.0.3" />
+    <PackageReference Include="Synthesis.Authentication.Jwt" Version="[1.0.*,1.1)" />
+    <PackageReference Include="Synthesis.Guest.ProjectContext" Version="[1.0.*,1.1)" />
+    <PackageReference Include="Synthesis.Logging" Version="[2.0.*,2.1)" />
+    <PackageReference Include="Synthesis.PolicyEvaluator" Version="[1.0.*,1.1)" />
+    <PackageReference Include="Synthesis.TenantService.InternalApi" Version="[1.0.*,1.1)" />
   </ItemGroup>
 
 </Project>
