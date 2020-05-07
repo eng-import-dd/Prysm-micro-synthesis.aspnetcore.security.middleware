@@ -6,7 +6,7 @@
     <Copyright>Copyright © Prysm, Inc. 2020</Copyright>
     <BuildId Condition=" '$(BuildId)' == '' ">0</BuildId>
     <Version>1.1.0.$(BuildId)</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
